@@ -67,7 +67,7 @@
         function saveToHistory(word) {
             let history = JSON.parse(localStorage.getItem("history")) || [];
             history.unshift(word);
-            if (history.length < 5) history.pop();
+            if (history.length < 1) history.pop();
             localStorage.setItem("history", JSON.stringify(history));
             displayHistory();
         }
