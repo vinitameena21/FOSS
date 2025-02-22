@@ -1,4 +1,5 @@
-body {
+<style>
+        body {
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 50px;
@@ -47,4 +48,4 @@ body {
             list-style: none;
             padding: 0;
         }
- 
+    </style>
