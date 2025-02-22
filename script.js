@@ -1,4 +1,5 @@
-  function toggleDarkMode() {
+ <script>
+        function toggleDarkMode() {
             document.body.classList.toggle("dark-mode");
         }
         
@@ -10,7 +11,7 @@
             }
             saveToHistory(word);
             
-            const url = https://api.dictionaryapi.dev/api/v2/entries/en/${word};
+            const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
             try {
                 const response = await fetch(url);
                 const data = await response.json();
@@ -33,7 +34,7 @@
                         <p><strong>Meaning (English):</strong> ${meaning}</p>
                         <p><strong>Meaning (Hindi):</strong> ${hindiMeaning}</p>
                         <p><strong>Synonyms:</strong> ${synonyms}</p>
-                        ${pronunciation ? <button onclick="playAudio('${pronunciation}')">🔊 Listen</button> : "<p>No pronunciation available</p>"}
+                        ${pronunciation ? `<button onclick="playAudio('${pronunciation}')">🔊 Listen</button>` : "<p>No pronunciation available</p>"}
                     `;
                 }
             } catch (error) {
@@ -45,7 +46,7 @@
             new Audio(url).play();
         }
         async function getHindiTranslation(text) {
-            const url = https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=en|hi;
+            const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=en|hi`;
             try {
                 const response = await fetch(url);
                 const data = await response.json();
@@ -72,7 +73,7 @@
         }
         function displayHistory() {
             const history = JSON.parse(localStorage.getItem("history")) || [];
-            document.getElementById("historyList").innerHTML = history.map(word => <li>${word}</li>).join('');
+            document.getElementById("historyList").innerHTML = history.map(word => `<li>${word}</li>`).join('');
         }
         function addToFavorites(word) {
             let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
@@ -84,8 +85,8 @@
         }
         function displayFavorites() {
             const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-            document.getElementById("favoritesList").innerHTML = favorites.map(word => <li>${word}</li>).join('');
+            document.getElementById("favoritesList").innerHTML = favorites.map(word => `<li>${word}</li>`).join('');
         }
         displayHistory();
         displayFavorites();
-
+    </script>
