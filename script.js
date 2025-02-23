@@ -1,4 +1,3 @@
- <script>
         
         
 function playSound() {
@@ -133,5 +132,3 @@ async function showSuggestions() {
 
     suggestionsBox.style.display = "block";
 }
-
-    </script>
