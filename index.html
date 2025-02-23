@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Online Dictionary</title>
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+      <title>Online Dictionary</title>
+    </head>
 <body>
     <div class="container">
+        <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
         <h2>Online Dictionary 📖</h2>
-        <button onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
-        <br><br>
-        <input type="text" id="wordInput" placeholder="Type a word...">
-        <button onclick="searchWord()">Search</button>
-        <button onclick="startVoiceInput()">🎤 Speak</button>
+        <div class="search-box">
+            <input type="text" id="wordInput" placeholder="Type here..." oninput="playSound(); showSuggestions()">
+            <button onclick="searchWord()">🔍</button>
+            <button onclick="startListening()">🎤</button>
+            <button onclick="speakResult()">🎙️</button>
+            <div class="suggestions" id="suggestions"></div>
+        </div>
         <div class="result" id="result"></div>
         <div class="history">
-            <h3>Search History</h3>
-            <ul id="historyList"></ul>
-        </div>
-        <div class="favorites">
-            <h3>Favorite Words</h3>
-            <ul id="favoritesList"></ul>
+            <select id="historyList" onchange="loadFromHistory()"></select>
+            <button class="clear-btn" onclick="clearHistory()">Clear</button>
         </div>
     </div>
-      <script src="script.js"></script>
+<script src="script.js"></script>
+
 </body>
-    </html>
+</html>
