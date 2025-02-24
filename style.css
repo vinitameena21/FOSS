@@ -19,8 +19,8 @@ body.dark-theme {
 }
 
 .container {
-  width: 100%;
-  max-width: 600px;
+  width: 200%;
+  max-width: 900px;
   background: rgba(234, 187, 237, 0.95);
   padding: 25px;
   border-radius: 20px;
