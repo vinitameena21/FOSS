@@ -53,10 +53,15 @@ let isSpeakerOn = false;
 
                     document.getElementById("result").innerHTML = `
                         <strong>Word:</strong> ${word} <br>
+                        <br>
                         <strong>Meaning:</strong> ${definitions} <br>
+                        <br>
                         <strong>Hindi Meaning:</strong> ${hindiMeaning} <br>
+                        <br>
                         <strong>Synonyms:</strong> ${synonyms.length ? synonyms.join(", ") : "None"} <br>
+                        <br>
                         <strong>Antonyms:</strong> ${antonyms.length ? antonyms.join(", ") : "None"} <br>
+                        <br>
                         <strong>Example:</strong> ${example}
                     `;
 
@@ -155,3 +160,5 @@ let isSpeakerOn = false;
             };
             recognition.start();
         }
+
+
