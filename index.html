@@ -18,10 +18,14 @@
             <div class="suggestions" id="suggestions"></div>
         </div>
         <div class="result" id="result"></div>
+        
         <div class="history">
-            <select id="historyList" onchange="loadFromHistory()"></select>
-            <button class="clear-btn" onclick="clearHistory()">Clear</button>
-        </div>
+          <select id="historyList" onchange="loadFromHistory()">
+              <option value="" disabled selected>Choose from history...</option>
+          </select>
+          <button class="clear-btn" onclick="clearHistory()">Clear</button>
+      </div>
+      
     </div>
 
     <script src="script.js"></script>
