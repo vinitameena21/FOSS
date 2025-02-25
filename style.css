@@ -1,7 +1,7 @@
-body {
+ body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #317c8b, #e8a0a4);
-  /* background-size: contain; */
+
   display: flex;
   background-color: #eb9393;
   justify-content: center;
@@ -20,7 +20,8 @@ body.dark-theme {
 
 .container {
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
+  height: 85vh;
   background: rgba(234, 187, 237, 0.95);
   padding: 25px;
   border-radius: 20px;
@@ -100,15 +101,16 @@ button:active {
   transform: scale(0.95);
 }
 
-.result {
-  margin-top: 20px;
+ .result {
+  margin-top: 30px;
   padding: 20px;
   background: rgba(248, 249, 250, 0.9);
   border-radius: 12px;
-  text-align: left;
+  text-align: center;
   border: 1px solid #dee2e6;
   transition: all 0.3s ease;
-}
+ 
+} 
 
 body.dark-theme .result {
   background: rgba(42, 42, 42, 0.9);
@@ -117,7 +119,7 @@ body.dark-theme .result {
 }
 
 .result strong {
-  color: #0d6efd;
+  color: #0a68f7;
 }
 
 body.dark-theme .result strong {
@@ -150,7 +152,7 @@ body.dark-theme select {
 }
 
 .clear-btn {
-  background: #dc3545;
+  background: black;
   padding: 10px 15px;
   border-radius: 8px;
   transition: all 0.3s ease;
@@ -249,4 +251,4 @@ body.dark-theme .suggestions div:hover {
   .clear-btn {
       width: 100%;
   }
-}
+} 
